@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SlangLingo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;800;900&family=Noto+Sans+SC:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skrin utama -->
+  <section id="home" class="screen active">
+    <header class="topbar">
+      <div class="brand">🐉 SlangLingo</div>
+      <div class="stats">
+        <span class="stat streak" title="Hari berturut-turut">🔥 <b id="streak">0</b></span>
+        <span class="stat xp" title="Jumlah XP">⚡ <b id="total-xp">0</b></span>
+      </div>
+    </header>
+    <main class="home-main">
+      <h1>Belajar slang Melayu dalam Mandarin</h1>
+      <p class="sub">Pilih satu pelajaran. Jawab betul untuk dapat XP, jawab betul berturut-turut untuk bonus combo!</p>
+      <div id="lessons" class="lessons"></div>
+      <button id="btn-random" class="btn btn-primary btn-wide">🎲 Cabaran Rawak (10 soalan)</button>
+    </main>
+  </section>
+
+  <!-- Skrin kuiz -->
+  <section id="quiz" class="screen">
+    <header class="quiz-top">
+      <button id="btn-quit" class="icon-btn" aria-label="Keluar">✕</button>
+      <div class="progress"><div id="progress-fill" class="progress-fill"></div></div>
+      <div class="hearts">❤️ <b id="hearts">5</b></div>
+    </header>
+    <main class="quiz-main">
+      <div id="combo" class="combo hidden"></div>
+      <h2 id="q-instruction" class="instruction"></h2>
+      <div class="prompt-row">
+        <div class="mascot">🐼</div>
+        <div id="q-prompt" class="bubble"></div>
+      </div>
+      <div id="options" class="options"></div>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div id="feedback" class="feedback">
+          <div id="fb-title" class="fb-title"></div>
+          <div id="fb-detail" class="fb-detail"></div>
+        </div>
+        <button id="btn-check" class="btn btn-primary" disabled>SEMAK</button>
+      </div>
+    </footer>
+  </section>
+
+  <!-- Skrin keputusan -->
+  <section id="result" class="screen">
+    <main class="result-main">
+      <div id="r-emoji" class="r-emoji">🎉</div>
+      <h1 id="r-title">Pelajaran tamat!</h1>
+      <div class="r-cards">
+        <div class="r-card gold"><span>JUMLAH XP</span><b id="r-xp">0</b></div>
+        <div class="r-card green"><span>KETEPATAN</span><b id="r-acc">0%</b></div>
+        <div class="r-card blue"><span>COMBO TERBAIK</span><b id="r-combo">0</b></div>
+      </div>
+      <div id="r-review" class="review"></div>
+      <div class="r-actions">
+        <button id="btn-retry" class="btn btn-secondary">ULANG</button>
+        <button id="btn-home" class="btn btn-primary">TERUSKAN</button>
+      </div>
+    </main>
+  </section>
+
+  <script src="js/data.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
