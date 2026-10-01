@@ -1,0 +1,10 @@
+{
+  "name": "mandarin-slang-app",
+  "version": "1.0.0",
+  "description": "Kuiz slang Melayu ke Mandarin gaya Duolingo",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "start": "npx --yes serve ."
+  }
+}
